@@ -1,0 +1,47 @@
+baseURL = 'https://joaosilveira.github.io/portfolio/'
+languageCode = 'pt-br'
+defaultcontentlanguage = 'pt-br'
+title = 'João Pedro Silveira'
+theme = 'hugo-coder'
+
+paginate = 20
+
+disqusShortname = "JoaoSilveira"
+
+[params]
+  author = "João Pedro Silveira"
+  info = "Full Stack Dev"
+  description = "My personal blog and portfolio"
+  keywords = "blog,developer,personal,portfolio"
+  avatarurl = "images/profile.png"
+
+  favicon_32 = "/images/favicon-32x32.png"
+  favicon_16 = "/images/favicon-16x16.png"
+
+  since = 2023
+
+  enableTwemoji = true
+
+  colorScheme = "auto"
+  hidecolorschemetoggle = false
+
+[[params.social]]
+  name = "Github"
+  icon = "fa fa-github fa-2x"
+  weight = 1
+  url = "https://github.com/joaosilveira/"
+
+[[menu.main]]
+  name = "Blog"
+  weight = 1
+  url  = "posts/"
+
+[[menu.main]]
+  name = "Projetos"
+  weight = 2
+  url  = "projects/"
+
+[[menu.main]]
+  name = "Quem Sou?"
+  weight = 3
+  url = "about/"
