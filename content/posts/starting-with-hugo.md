@@ -1,5 +1,5 @@
 +++ 
-draft = true
+draft = false
 date = 2023-06-27T14:58:45-03:00
 title = "Iniciando um Portfólio com Hugo"
 description = ""
@@ -39,4 +39,42 @@ brevemente sobre os conceitos e técnicas empregadas no desenvolvimento.
 
 # Primeiros passos
 
-**TODO**
+## Ambiente
+
+Tudo se inicia preparando o ambiente, isto é, instalando Hugo e suas "dependências", optei primeiramente pela opção
+[Build from source](https://gohugo.io/installation/windows/#build-from-source), então segui as instruções presentes na página.
+Já tinha Go instalado na minha máquina (Windows 10), porém era uma versão antiga, fiz o update para uma versão que suporta o Hugo.
+Também é necessário ter um compilador GCC instalado caso queira buildar a versão extendida, portanto baixei uma versão [apontada por eles](https://discourse.gohugo.io/t/41370).
+Com as dependências resolvidas, continuando os passos indicados pelo link tentei executar o comando:
+
+```
+go install -tags extended github.com/gohugoio/hugo@latest
+```
+
+O que falhou por um erro no linker do GCC, não estava encontrando duas bibliotecas. Testei sem sucesso com diferentes versões
+do GCC que se encontram no mesmo link. Decidi então mudar para a opção [Prebuilt binaries](https://gohugo.io/installation/windows/#prebuilt-binaries),
+fiz o download do arquivo, extraí o conteúdo para uma pasta, adicionei o diretório no **PATH** do sistema, e então, a ferramenta funcionou.
+
+## Projeto
+
+Com base no [Quick Start](https://gohugo.io/getting-started/quick-start/) deles, eu criei um projeto novo pelo terminal:
+
+```
+hugo new site portfolio
+```
+
+Existem diversos temas disponíveis para uso [no site deles](https://themes.gohugo.io), gostei especialmente do [Coder](https://themes.gohugo.io/themes/hugo-coder/),
+então instalei ele:
+
+```
+git submodule add https://github.com/luizdepra/hugo-coder.git themes/hugo-coder
+```
+
+Ajustei o arquivo `hugo.toml` para utilizar o tema correto `theme = 'hugo-coder'`, e iniciei o servidor local com o comando:
+
+```
+hugo server -D
+```
+
+A partir deste ponto eu passei a ajustar as [configurações do tema](https://github.com/luizdepra/hugo-coder/blob/main/docs/configurations.md),
+escrever este post e estudar mais Hugo.

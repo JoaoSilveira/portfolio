@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>
+  Iniciando um Portfólio com Hugo · João Pedro Silveira
+</title>
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+
+
+
+
+<meta name="author" content="João Pedro Silveira">
+<meta name="description" content="Nesta série de posts vou falar sobre o processo de fazer o meu portfólio usando o framework Hugo. Isto não é para ser um tutorial, mas sim um relatório de atividades desempenhadas.
+O que é Hugo? Link para o cabeçalho Hugo é um framework para criação de sites estáticos, sua velocidade e flexibilidade o fez subir em popularidade, hoje é um dos frameworks open-source mais populares da área. A ferramenta foi escrita em Go e é otimizada para velocidade, o código fonte é disponibilizado pelo GitHub.">
+<meta name="keywords" content="blog,developer,personal,portfolio">
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Iniciando um Portfólio com Hugo"/>
+<meta name="twitter:description" content="Nesta série de posts vou falar sobre o processo de fazer o meu portfólio usando o framework Hugo. Isto não é para ser um tutorial, mas sim um relatório de atividades desempenhadas.
+O que é Hugo? Link para o cabeçalho Hugo é um framework para criação de sites estáticos, sua velocidade e flexibilidade o fez subir em popularidade, hoje é um dos frameworks open-source mais populares da área. A ferramenta foi escrita em Go e é otimizada para velocidade, o código fonte é disponibilizado pelo GitHub."/>
+
+<meta property="og:title" content="Iniciando um Portfólio com Hugo" />
+<meta property="og:description" content="Nesta série de posts vou falar sobre o processo de fazer o meu portfólio usando o framework Hugo. Isto não é para ser um tutorial, mas sim um relatório de atividades desempenhadas.
+O que é Hugo? Link para o cabeçalho Hugo é um framework para criação de sites estáticos, sua velocidade e flexibilidade o fez subir em popularidade, hoje é um dos frameworks open-source mais populares da área. A ferramenta foi escrita em Go e é otimizada para velocidade, o código fonte é disponibilizado pelo GitHub." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://joaosilveira.github.io/portfolio/posts/portfolio-1-inicio/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-06-27T14:58:45-03:00" />
+<meta property="article:modified_time" content="2023-06-27T14:58:45-03:00" />
+
+
+
+
+<link rel="canonical" href="https://joaosilveira.github.io/portfolio/posts/portfolio-1-inicio/">
+
+
+<link rel="preload" href="/fonts/forkawesome-webfont.woff2?v=1.2.0" as="font" type="font/woff2" crossorigin>
+
+
+  
+  
+  <link rel="stylesheet" href="/portfolio/css/coder.min.5adbe72fc41dcfb852215b84695288939b6b606db73238bd3ee936469572fc9c.css" integrity="sha256-WtvnL8Qdz7hSIVuEaVKIk5trYG23Mji9Puk2RpVy/Jw=" crossorigin="anonymous" media="screen" />
+
+
+
+
+
+
+  
+    
+    
+    <link rel="stylesheet" href="/portfolio/css/coder-dark.min.a00e6364bacbc8266ad1cc81230774a1397198f8cfb7bcba29b7d6fcb54ce57f.css" integrity="sha256-oA5jZLrLyCZq0cyBIwd0oTlxmPjPt7y6KbfW/LVM5X8=" crossorigin="anonymous" media="screen" />
+  
+
+
+
+ 
+
+
+
+
+<link rel="icon" type="image/png" href="/portfolio/images/favicon-32x32.png" sizes="32x32">
+<link rel="icon" type="image/png" href="/portfolio/images/favicon-16x16.png" sizes="16x16">
+
+<link rel="apple-touch-icon" href="/images/apple-touch-icon.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/images/safari-pinned-tab.svg" color="#5bbad5">
+
+
+
+
+
+
+
+
+
+</head>
+
+
+
+
+
+
+<body class="preload-transitions colorscheme-auto">
+  
+<div class="float-container">
+    <a id="dark-mode-toggle" class="colorscheme-toggle">
+        <i class="fa fa-adjust fa-fw" aria-hidden="true"></i>
+    </a>
+</div>
+
+
+  <main class="wrapper">
+    <nav class="navigation">
+  <section class="container">
+    <a class="navigation-title" href="/portfolio">
+      João Pedro Silveira
+    </a>
+    
+      <input type="checkbox" id="menu-toggle" />
+      <label class="menu-button float-right" for="menu-toggle">
+        <i class="fa fa-bars fa-fw" aria-hidden="true"></i>
+      </label>
+      <ul class="navigation-list">
+        
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/portfolio/posts/">Blog</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/portfolio/projects/">Projetos</a>
+            </li>
+          
+            <li class="navigation-item">
+              <a class="navigation-link" href="/portfolio/about/">Quem Sou?</a>
+            </li>
+          
+        
+        
+      </ul>
+    
+  </section>
+</nav>
+
+
+    <div class="content">
+      
+  <section class="container post">
+    <article>
+      <header>
+        <div class="post-title">
+          <h1 class="title">
+            <a class="title-link" href="https://joaosilveira.github.io/portfolio/posts/portfolio-1-inicio/">
+              Iniciando um Portfólio com Hugo
+            </a>
+          </h1>
+        </div>
+        <div class="post-meta">
+          <div class="date">
+            <span class="posted-on">
+              <i class="fa fa-calendar" aria-hidden="true"></i>
+              <time datetime="2023-06-27T14:58:45-03:00">
+                junho 27, 2023
+              </time>
+            </span>
+            <span class="reading-time">
+              <i class="fa fa-clock-o" aria-hidden="true"></i>
+              3 minutos de leitura
+            </span>
+          </div>
+          
+          <div class="categories">
+  <i class="fa fa-folder" aria-hidden="true"></i>
+    <a href="/portfolio/categories/portf%C3%B3lio-com-hugo/">Portfólio com Hugo</a></div>
+
+          
+        </div>
+      </header>
+
+      <div class="post-content">
+        
+        <p>Nesta série de posts vou falar sobre o processo de fazer o meu portfólio usando o framework <a href="https://gohugo.io"  class="external-link" target="_blank" rel="noopener">Hugo</a>.
+Isto não é para ser um tutorial, mas sim um relatório de atividades desempenhadas.</p>
+<h2 id="o-que-é-hugo">
+  O que é Hugo?
+  <a class="heading-link" href="#o-que-%c3%a9-hugo">
+    <i class="fa fa-link" aria-hidden="true" title="Link para o cabeçalho"></i>
+    <span class="sr-only">Link para o cabeçalho</span>
+  </a>
+</h2>
+<p>Hugo é um framework para criação de sites estáticos, sua velocidade e flexibilidade o fez subir em popularidade,
+hoje é um dos frameworks open-source mais populares da área. A ferramenta foi escrita em <a href="https://go.dev"  class="external-link" target="_blank" rel="noopener">Go</a> e é
+otimizada para velocidade, o código fonte é disponibilizado pelo <a href="https://github.com/gohugoio/hugo"  class="external-link" target="_blank" rel="noopener">GitHub</a>.</p>
+<h2 id="por-que-hugo">
+  Por que Hugo?
+  <a class="heading-link" href="#por-que-hugo">
+    <i class="fa fa-link" aria-hidden="true" title="Link para o cabeçalho"></i>
+    <span class="sr-only">Link para o cabeçalho</span>
+  </a>
+</h2>
+<p>Existem diversas alternativas para gerar sites estáticos, como <a href="https://www.11ty.dev"  class="external-link" target="_blank" rel="noopener">11ty</a>, <a href="https://jekyllrb.com"  class="external-link" target="_blank" rel="noopener">Jekyll</a>, <a href="https://www.gatsbyjs.com"  class="external-link" target="_blank" rel="noopener">Gatsby</a>.
+Por que escolher Hugo?</p>
+<p>Hugo me pareceu a ferramenta mais apropriada para a minha finalidade de criar um blog/portfólio, é um framework bem
+autossuficiente, isto é, não depende de plugins ou outras ferramentas externas para realizar tarefas corriqueiras, é
+uma ferramenta simples mas bem flexível, e muito mais performática que as alternativas escritas em JavaScript.</p>
+<h1 id="planejamento">
+  Planejamento
+  <a class="heading-link" href="#planejamento">
+    <i class="fa fa-link" aria-hidden="true" title="Link para o cabeçalho"></i>
+    <span class="sr-only">Link para o cabeçalho</span>
+  </a>
+</h1>
+<p>A finalidade deste site é apresentar a mim, meu currículo, projetos e competências. Atualmente planejo dividir o conteúdo
+em duas grandes sessões: blog e projetos. No blog vou relatar o desenvolvimento de meus projetos, demonstrar competências
+que não estão contidas em um projeto, e possívelmente escrever sobre coisas que me interessam. A ala de projetos será
+dedicada a apresentar os meus projetos, estejam eles em fase de planejamento, em andamento ou concluído, e falar
+brevemente sobre os conceitos e técnicas empregadas no desenvolvimento.</p>
+<h1 id="primeiros-passos">
+  Primeiros passos
+  <a class="heading-link" href="#primeiros-passos">
+    <i class="fa fa-link" aria-hidden="true" title="Link para o cabeçalho"></i>
+    <span class="sr-only">Link para o cabeçalho</span>
+  </a>
+</h1>
+<h2 id="ambiente">
+  Ambiente
+  <a class="heading-link" href="#ambiente">
+    <i class="fa fa-link" aria-hidden="true" title="Link para o cabeçalho"></i>
+    <span class="sr-only">Link para o cabeçalho</span>
+  </a>
+</h2>
+<p>Tudo se inicia preparando o ambiente, isto é, instalando Hugo e suas &ldquo;dependências&rdquo;, optei primeiramente pela opção
+<a href="https://gohugo.io/installation/windows/#build-from-source"  class="external-link" target="_blank" rel="noopener">Build from source</a>, então segui as instruções presentes na página.
+Já tinha Go instalado na minha máquina (Windows 10), porém era uma versão antiga, fiz o update para uma versão que suporta o Hugo.
+Também é necessário ter um compilador GCC instalado caso queira buildar a versão extendida, portanto baixei uma versão <a href="https://discourse.gohugo.io/t/41370"  class="external-link" target="_blank" rel="noopener">apontada por eles</a>.
+Com as dependências resolvidas, continuando os passos indicados pelo link tentei executar o comando:</p>
+<pre tabindex="0"><code>go install -tags extended github.com/gohugoio/hugo@latest
+</code></pre><p>O que falhou por um erro no linker do GCC, não estava encontrando duas bibliotecas. Testei sem sucesso com diferentes versões
+do GCC que se encontram no mesmo link. Decidi então mudar para a opção <a href="https://gohugo.io/installation/windows/#prebuilt-binaries"  class="external-link" target="_blank" rel="noopener">Prebuilt binaries</a>,
+fiz o download do arquivo, extraí o conteúdo para uma pasta, adicionei o diretório no <strong>PATH</strong> do sistema, e então, a ferramenta funcionou.</p>
+<h2 id="projeto">
+  Projeto
+  <a class="heading-link" href="#projeto">
+    <i class="fa fa-link" aria-hidden="true" title="Link para o cabeçalho"></i>
+    <span class="sr-only">Link para o cabeçalho</span>
+  </a>
+</h2>
+<p>Com base no <a href="https://gohugo.io/getting-started/quick-start/"  class="external-link" target="_blank" rel="noopener">Quick Start</a> deles, eu criei um projeto novo pelo terminal:</p>
+<pre tabindex="0"><code>hugo new site portfolio
+</code></pre><p>Existem diversos temas disponíveis para uso <a href="https://themes.gohugo.io"  class="external-link" target="_blank" rel="noopener">no site deles</a>, gostei especialmente do <a href="https://themes.gohugo.io/themes/hugo-coder/"  class="external-link" target="_blank" rel="noopener">Coder</a>,
+então instalei ele:</p>
+<pre tabindex="0"><code>git submodule add https://github.com/luizdepra/hugo-coder.git themes/hugo-coder
+</code></pre><p>Ajustei o arquivo <code>hugo.toml</code> para utilizar o tema correto <code>theme = 'hugo-coder'</code>, e iniciei o servidor local com o comando:</p>
+<pre tabindex="0"><code>hugo server -D
+</code></pre><p>A partir deste ponto eu passei a ajustar as <a href="https://github.com/luizdepra/hugo-coder/blob/main/docs/configurations.md"  class="external-link" target="_blank" rel="noopener">configurações do tema</a>,
+escrever este post e estudar mais Hugo.</p>
+
+      </div>
+
+
+      <footer>
+        
+
+
+        <div id="disqus_thread"></div>
+<script>
+  window.disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "JoaoSilveira" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+    
+    document.addEventListener('themeChanged', function (e) { 
+        if (document.readyState == 'complete') {
+          DISQUS.reset({ reload: true, config: disqus_config });
+        }
+    });
+</script>
+        
+        
+        
+      </footer>
+    </article>
+
+    
+  </section>
+
+    </div>
+
+    <footer class="footer">
+  <section class="container">
+    ©
+    
+    2023
+     João Pedro Silveira 
+    ·
+    
+    Promovido por <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a> & <a href="https://github.com/luizdepra/hugo-coder/" target="_blank" rel="noopener">Coder</a>.
+    
+  </section>
+</footer>
+
+  </main>
+
+  
+
+  
+  
+  <script src="/portfolio/js/coder.min.6ae284be93d2d19dad1f02b0039508d9aab3180a12a06dcc71b0b0ef7825a317.js" integrity="sha256-auKEvpPS0Z2tHwKwA5UI2aqzGAoSoG3McbCw73gloxc="></script>
+  
+
+  
+
+  
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</body>
+
+</html>
