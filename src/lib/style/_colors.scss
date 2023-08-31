@@ -1,0 +1,56 @@
+@use "sass:map";
+@use "sass:color";
+
+$colors: (
+    "white": white,
+    "black": black,
+    "blue": #147ae8,
+    "red": #e82d14,
+    "gray": #7f7f7f,
+);
+
+$tints: (
+    "very-light": 50%,
+    "light": 30%,
+    "dark": -30%,
+    "very-dark": -50%,
+);
+
+@mixin apply-color-and-tint($name, $color) {
+    --#{$name}: #{$color};
+
+    @each $tint, $perc in $tints {
+        --#{$name}-#{$tint}: #{color.scale($color, $lightness: $perc)};
+    }
+}
+
+@mixin apply-theme($theme) {
+    @each $name, $color in $colors {
+        @include apply-color-and-tint($name, $color);
+    }
+
+    @if $theme == "dark" {
+        @include apply-color-and-tint("background", map.get($colors, "black"));
+        @include apply-color-and-tint("foreground", map.get($colors, "white"));
+    }
+
+    @if $theme == "light" {
+        @include apply-color-and-tint("background", map.get($colors, "white"));
+        @include apply-color-and-tint("foreground", map.get($colors, "black"));
+    }
+}
+
+:root:not(.dark-theme),
+.light-theme {
+    @include apply-theme("light");
+}
+
+.dark-theme {
+    @include apply-theme("dark");
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not(.light-theme) {
+        @include apply-theme("dark");
+    }
+}

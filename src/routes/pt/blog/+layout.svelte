@@ -1,8 +1,8 @@
 <script lang="ts">
     import 'prism-themes/themes/prism-vsc-dark-plus.min.css';
-	import type { PageData } from './$types';
+	import type { LayoutData } from './$types';
 
-    export let data: PageData;
+    export let data: LayoutData;
 </script>
 
 <svelte:head>
@@ -11,4 +11,4 @@
 	<meta name="description" content={data.description} />
 </svelte:head>
 
-<svelte:component this={data.component} />
+<slot />
