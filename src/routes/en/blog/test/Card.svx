@@ -1,0 +1,7 @@
+---
+date: 2023-09-03
+---
+
+# Testing blog functionalities
+
+This is me going about the blog functionality and making things work

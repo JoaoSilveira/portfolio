@@ -1,37 +1,17 @@
 <script lang="ts">
 	import { browser } from '$app/environment';
-	import { onMount } from 'svelte';
+	import { theme } from '$lib/store/theme';
 	import FaMoon from 'svelte-icons/fa/FaMoon.svelte';
 	import FaSun from 'svelte-icons/fa/FaSun.svelte';
-
-	type Theme = 'light' | 'dark';
-
-	let currentTheme: Theme = 'light';
-
-	onMount(() => {
-		if (!browser) return;
-
-		const storedTheme = localStorage.getItem('color-theme');
-
-		if (storedTheme === 'dark') {
-			currentTheme = 'dark';
-		} else {
-			currentTheme = 'light';
-		}
-	});
-
-    function toggleTheme() {
-        currentTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        localStorage.setItem('color-theme', currentTheme);
-    }
 
 	$: {
 		if (browser) {
 			const element = document.getElementsByTagName('html')[0];
-			if (currentTheme == 'light') {
+
+			if ($theme == 'light') {
 				element.classList.remove('dark-theme');
 				element.classList.add('light-theme');
-			} else if (currentTheme == 'dark') {
+			} else if ($theme == 'dark') {
 				element.classList.add('dark-theme');
 				element.classList.remove('light-theme');
 			}
@@ -39,8 +19,13 @@
 	}
 </script>
 
-<button type="button" on:click={toggleTheme}>
-	{#if currentTheme === 'light'}
+<button
+	type="button"
+	on:click={theme.toggle}
+	class:light={$theme === 'light'}
+	class:dark={$theme === 'dark'}
+>
+	{#if $theme === 'light'}
 		<FaSun />
 	{:else}
 		<FaMoon />
@@ -48,6 +33,16 @@
 </button>
 
 <style lang="scss">
+	.dark {
+		--button: var(--blue);
+		--button-highlight: var(--blue-dark);
+	}
+
+	.light {
+		--button: var(--yellow);
+		--button-highlight: var(--yellow-dark);
+	}
+
 	button {
 		display: block;
 		height: auto;
@@ -56,8 +51,12 @@
 		cursor: pointer;
 		padding: 3px;
 
-		color: var(--foreground);
+		color: var(--button);
 		background: none;
 		border: none;
+
+		&:hover {
+			color: var(--button-highlight);
+		}
 	}
 </style>

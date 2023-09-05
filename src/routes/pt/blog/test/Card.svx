@@ -1,0 +1,7 @@
+---
+date: 2023-09-03
+---
+
+# Testando funcionalidades do blog
+
+Esta postagem é a minha lenta e tortuosa descida ao fundo do poço da loucura tentando fazer o blog funcionar
